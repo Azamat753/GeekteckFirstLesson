@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/name_animal_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:text="This dog"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="25sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/animal_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/squirrel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_animal_tv" />
+
+    <Button
+        android:id="@+id/image_first_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="changeImage"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="image#1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animal_image" />
+
+    <Button
+        android:id="@+id/image_second_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:onClick="changeImage"
+        android:text="image#2"
+        app:layout_constraintStart_toEndOf="@id/image_first_btn"
+        app:layout_constraintTop_toBottomOf="@id/animal_image" />
+
+    <Button
+        android:id="@+id/image_third_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:onClick="changeImage"
+        android:layout_marginTop="10dp"
+        android:text="image#3"
+        app:layout_constraintStart_toEndOf="@id/image_second_btn"
+        app:layout_constraintTop_toBottomOf="@id/animal_image" />
+
+    <Button
+        android:id="@+id/dog_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="dog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_first_btn" />
+
+    <Button
+        android:id="@+id/cat_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="cat"
+        app:layout_constraintStart_toEndOf="@id/dog_btn"
+        app:layout_constraintTop_toBottomOf="@id/image_third_btn" />
+
+    <Button
+        android:id="@+id/squirrel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="squirrel"
+        app:layout_constraintStart_toEndOf="@id/cat_btn"
+        app:layout_constraintTop_toBottomOf="@id/image_third_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
